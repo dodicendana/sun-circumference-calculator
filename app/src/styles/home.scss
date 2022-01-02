@@ -1,0 +1,111 @@
+@import "variables.scss";
+
+.home-wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url($home-background-image) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    opacity: 0.8;
+    z-index: -1;
+  }
+
+  .modal {
+    width: fit-content;
+    height: fit-content;
+    margin: 4rem 1.5rem;
+    padding: 2rem;
+    min-width: 20rem;
+    opacity: 0.95;
+    z-index: 10;
+  }
+
+  .home-title {
+    color: $text-white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.button-wrapper {
+  margin-top: 2rem;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.button {
+  background-color: $light-orange;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  -moz-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  margin-left: 0;
+  @media only screen and (min-width: 768px) {
+    height: 3.5rem;
+    &:first-child {
+      margin-left: 0;
+    }
+    margin-left: 10%;
+  }
+  &:hover {
+    background-color: #c29224;
+    box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
+      0 0.5rem 2rem 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+.textbox-wrapper {
+  width: 100%;
+  height: 1.5rem;
+  background-color: $text-white;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+  display: table;
+  .textbox-label {
+    display: table-cell;
+    padding: 0.25rem 0.75rem;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-right: solid 1.5px $light-grey;
+    background-color: $lighter-grey;
+    width: fit-content;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+  .textbox-value {
+    display: table-cell;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 0.25rem 0.75rem;
+    background-color: #fff;
+    width: 100%;
+    text-align: right;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+}

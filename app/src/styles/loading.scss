@@ -1,0 +1,134 @@
+.loading-wrapper {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: $background-fade-black;
+  &.show {
+    -webkit-animation: loading-fade-in 0.25s;
+    -moz-animation: loading-fade-in 0.25s;
+    -ms-animation: loading-fade-in 0.25s;
+    -o-animation: loading-fade-in 0.25s;
+    animation: loading-fade-in 0.25s;
+  }
+  &.hide {
+    -webkit-animation: loading-fade-out 0.25s;
+    -moz-animation: loading-fade-out 0.25s;
+    -ms-animation: loading-fade-out 0.25s;
+    -o-animation: loading-fade-out 0.25s;
+    animation: loading-fade-out 0.25s;
+    opacity: 0;
+  }
+  &.display-none {
+    display: none;
+  }
+
+  .modal {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .loading-inner-wrapper {
+    margin-top: -1.1rem;
+  }
+
+  .loading-image {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+  .loading-text {
+    color: $text-white;
+    text-align: center;
+  }
+}
+
+// Fade In Animation
+@keyframes loading-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes loading-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes loading-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes loading-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes loading-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Fade Out Animation
+@keyframes loading-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes loading-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes loading-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-ms-keyframes loading-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-o-keyframes loading-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

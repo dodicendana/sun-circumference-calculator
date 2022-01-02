@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "38fc741b-a0d7-458d-9820-a68697ef327c",
+		"name": "SunCircumferenceCalculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Reset Pi Value",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/pi/reset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"pi",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Latest Pi Value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/pi/findLatest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"pi",
+						"findLatest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Latest Pi Value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/pi/calculateLatest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"pi",
+						"calculateLatest"
+					]
+				},
+				"description": "It will calculate new Pi value with increased accuracy."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
